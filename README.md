@@ -175,9 +175,167 @@ Job-Market-Analysis-India-USA/
 
 ## Project Status
 
-**Phase 1 – Project Proposal and Initial Dataset Inspection**
+## Project Domain
+**Human Resources Analytics (HR Analytics)**
 
-The project title, business problem, objectives, dataset source, and planned analysis have been defined. The uploaded dataset has been inspected and confirmed to contain 100,009 rows and 17 columns, covering India and the USA.
+## 1. Project Overview
 
-The next phase will involve data quality assessment, cleaning, exploratory analysis, SQL querying, Python analysis, Power BI dashboard development, and documentation of evidence-based findings.
+This project focuses on analysing job-posting data from India and the United States to understand patterns in job opportunities, skill requirements, advertised salaries, experience requirements, and remote-work arrangements.
+
+The project uses a public job-postings dataset containing information about job titles, roles, companies, locations, seniority levels, skills, and annual salary values where available.
+
+The main aim is to transform raw job-posting data into meaningful insights that can help students, job seekers, and career planners better understand the skills and requirements mentioned in job advertisements.
+
+The project is divided into three phases:
+
+- **Phase 1:** Project Proposal and Initial Dataset Inspection
+- **Phase 2:** Data Processing and Cleaning
+- **Phase 3:** Exploratory Data Analysis (EDA)
+
+## 2. Business Problem
+
+Students and job seekers often find it difficult to identify which technical and professional skills are frequently mentioned in job advertisements, what experience levels employers request, and how advertised salaries vary across roles and locations.
+
+This project addresses the problem by analysing job-posting data from India and the United States to identify frequently mentioned skills, examine available salary patterns, compare job requirements, and explore remote-work opportunities.
+
+The analysis provides descriptive insights from job advertisements. It does not measure the complete gap between employer skill demand and job-seeker skill supply.
+
+## 3. Project Objectives
+
+1. Understand the structure and quality of the job-postings dataset.
+2. Identify frequently advertised job roles, categories, seniority levels, and locations.
+3. Analyse frequently mentioned skills.
+4. Examine available annual salary information across roles and countries.
+5. Explore experience requirements across job roles.
+6. Analyse remote-work arrangements.
+7. Compare job-posting patterns between India and the United States.
+8. Present meaningful insights through data analysis and visualisation.
+
+## 4. Dataset Information
+
+| Description | Details |
+|---|---|
+| Dataset | Job Postings 2026: India and United States |
+| Source | [Fliar BI Dataset](https://fliarbi.com/datasets/job-postings-2026/) |
+| Original file | job_postings_2026_sample.csv |
+| Format | CSV |
+| Countries | India and United States |
+| Period | January–June 2026 |
+
+Important dataset columns include:
+
+- posting_id
+- posted_date
+- title
+- company
+- role
+- seniority
+- category
+- city
+- region
+- country
+- Work Mode
+- experience_years
+- education
+- skills
+- salary_annual_usd
+- company_domain
+
+## 5. Project Workflow
+
+### Phase 1 – Project Proposal and Initial Dataset Inspection
+
+- Defined the business problem and project objectives.
+- Identified the dataset and its source.
+- Explored dataset dimensions and structure.
+- Inspected column names and data types.
+- Checked missing values.
+- Established the project scope and limitations.
+
+**Notebook:** `Job_Market_Analysis_Phase1.ipynb`
+
+### Phase 2 – Data Processing and Cleaning
+
+- Created a separate working copy of the original dataset.
+- Identified and handled missing categorical values.
+- Retained missing numerical values where imputation could be misleading.
+- Checked duplicate records.
+- Converted posting dates into datetime format.
+- Checked negative and zero values.
+- Identified potential outliers using the IQR method.
+- Investigated unusual salary and experience values.
+- Removed an irrelevant column.
+
+**Final cleaned dataset:** 100,009 rows and 16 columns.
+
+**Notebook:** `Job_Market_Analysis_phase2.ipynb`
+
+### Phase 3 – Exploratory Data Analysis (EDA)
+
+Performed descriptive and visual analysis of:
+
+- Job postings by country.
+- Monthly job-posting trends.
+- Top 10 most common job roles.
+- Job seniority distribution.
+- Work-mode distribution.
+- Most frequently mentioned skills.
+- Experience distribution.
+- Experience by seniority level.
+- Annual salary distribution.
+- Salary comparison by country.
+- Average salary by job role.
+- Education qualification distribution.
+- Correlation between experience and salary.
+- Experience versus salary.
+
+**Notebook:** `Job_Market_Analysis_phase3.ipynb`
+
+## 6. Key Findings
+
+Some important findings from the exploratory analysis:
+
+- The United States contributes 80,015 job postings, while India contributes 19,994.
+- June recorded the highest number of postings, with 23,562.
+- March recorded the lowest number of postings, with 12,553.
+- Healthcare, Sales, and Finance are among the most frequently identified job roles.
+- Python, Excel, and SQL are the most frequently mentioned skills.
+- Onsite is the largest identified work-mode category.
+- The median required experience is 4 years.
+- The median available annual salary is USD 55,000.
+- Bachelor's degree is the most frequently identified education qualification.
+
+## 7. Tools and Technologies
+
+| Tool | Purpose |
+|---|---|
+| Python | Data analysis and processing |
+| Jupyter Notebook | Development environment |
+| Pandas | Data manipulation and cleaning |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualisation |
+| Seaborn | Statistical visualisation |
+| GitHub | Project documentation and version control |
+
+## 8. Repository Structure
+
+```text
+Job-Market-and-Salary-Trends-Analysis/
+│
+├── README.md
+│
+├── Phase-1/
+│   ├── README.md
+│   └── Job_Market_Analysis_Phase1.ipynb
+│
+├── Phase-2/
+│   ├── README.md
+│   └── Job_Market_Analysis_phase2.ipynb
+│
+├── Phase-3/
+│   ├── README.md
+│   └── Job_Market_Analysis_phase3.ipynb
+│
+└── data/
+    └── Cleaned_Job_Market_Dataset.csv
 
